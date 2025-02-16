@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingressos Disponíveis</title>
+</head>
+<body>
+    <h1>Ingressos Disponíveis</h1>
+    <ul>
+        {{#ingressos}}
+        <li>
+            {{nome}} - R$ {{preco}} - {{quantidade}} disponíveis
+            <form action="/comprar" method="post">
+                <input type="hidden" name="ingressoId" value="{{_id}}">
+                <input type="number" name="quantidade" min="1" max="{{quantidade}}" required>
+                <button type="submit">Comprar</button>
+            </form>
+        </li>
+        {{/ingressos}}
+    </ul>
+</body>
+</html>

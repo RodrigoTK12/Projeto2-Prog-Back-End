@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Histórico de Compras</title>
+</head>
+<body>
+    <h1>Suas Compras</h1>
+    <ul>
+        {{#compras}}
+        <li>
+            Ingresso: {{ingresso.nome}} - Quantidade: {{quantidade}} - Data: {{data}}
+        </li>
+        {{/compras}}
+    </ul>
+</body>
+</html>
